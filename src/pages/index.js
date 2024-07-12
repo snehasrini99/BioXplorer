@@ -1,20 +1,19 @@
 // pages/index.js
 
 import React from 'react';
+import ImageAndTextExample from '../components/Navbar/Home';
 
 const Home = () => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'centre',
-        alignItems: 'centre',
-        height: '100vh'
-      }}
-    >
-      <h1>BioXplorer : About</h1>
-    </div>
-  );
+    return (
+        <div
+            
+        >
+            
+            <div>
+                <ImageAndTextExample />
+            </div>
+        </div>
+    );
 };
 
 export default Home;

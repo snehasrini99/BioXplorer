@@ -1,6 +1,7 @@
 // pages/about.js
 
 import React from "react";
+import ImageAndTextExample from "../components/Navbar/Home";
 
 const About = () => {
     return (
@@ -12,9 +13,6 @@ const About = () => {
                 height: "100vh",
             }}
         >
-            <h1>
-                BioXplorer
-            </h1>
         </div>
     );
 };

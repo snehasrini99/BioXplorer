@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+    padding: 0;
+    gap: 10px;  /* Add gap between cards */
+    box-sizing: border-box;  /* Include padding and border in element's total width and height */
+    padding: 10px;  /* Add padding to ensure no cards touch the edge */
+}
+
+.custom-card {
+    background-color: #b4d3b2;  
+    color: black;  /* Black text */
+    transition: transform 0.2s;
+    border: none;
+    border-radius: 5px;  /* Rounded corners */
+    margin: 0;  /* Remove any default margins */
+    flex: 1;  /* Make cards take up equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);  /* Slightly enlarge the card on hover */
+}
+
+.card-title {
+    text-align: center;
+    color: black;
+}
+
+.card-text {
+    text-align: center;
+    color: black;
+}

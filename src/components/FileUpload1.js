@@ -4,9 +4,8 @@ import ScrollableBox from './ScrollableBox';
 const FileUpload = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [uploadStatus, setUploadStatus] = useState('');
-    const [abstractText, setAbstractText] = useState('');
-    const [title, setTitle] = useState('');
-    const [prediction, setPrediction] = useState(null);
+    const [abstractText,setAbstractText] = useState('');
+    const [title,setTitle] = useState('');
 
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
@@ -29,37 +28,15 @@ const FileUpload = () => {
                 }
             });
             setUploadStatus('File uploaded successfully');
-            setSelectedFile(null);
-            console.log("response.data", response.data)
+            setSelectedFile(null); 
+            console.log("response.data",response.data)
             const cleanedAbstractText = response.data.abstract.replace(/[\r\n]+/g, ' ');
             setAbstractText(cleanedAbstractText)
             setTitle(response.data.title)
-            await handlePrediction(response.data.title, cleanedAbstractText);
-
+            
         } catch (error) {
             setUploadStatus('File upload failed');
         };
-    }
-
-    const handlePrediction = async (title, abstract) => {
-        const data = {
-            title: title,
-            abstract_text: abstract
-        };
-
-        console.log("inside Prediction")
-
-        try {
-            const response = await axios.post('http://128.143.67.143:5000/predict', data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            });
-            setPrediction(response.data);
-            console.log(response.data)
-        } catch (error) {
-            console.error('Prediction failed:', error);
-        }
     }
 
     return (<>
@@ -90,10 +67,6 @@ const FileUpload = () => {
             </div>
             {uploadStatus && <p>{uploadStatus}</p>}
             <ScrollableBox title={abstractText} />
-            {prediction && <div>
-                <h3>Prediction Results</h3>
-                <pre>{JSON.stringify(prediction, null, 2)}</pre>
-            </div>}
         </div>
     </>);
 

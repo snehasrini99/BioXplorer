@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BioXplorer/static/css/main.4b80d304.css",
+    "main.js": "/BioXplorer/static/js/main.3c13ae7b.js",
+    "static/js/453.0f428303.chunk.js": "/BioXplorer/static/js/453.0f428303.chunk.js",
+    "index.html": "/BioXplorer/index.html",
+    "main.4b80d304.css.map": "/BioXplorer/static/css/main.4b80d304.css.map",
+    "main.3c13ae7b.js.map": "/BioXplorer/static/js/main.3c13ae7b.js.map",
+    "453.0f428303.chunk.js.map": "/BioXplorer/static/js/453.0f428303.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b80d304.css",
+    "static/js/main.3c13ae7b.js"
+  ]
+}

@@ -8,7 +8,22 @@ const pdfParse = require('pdf-parse');
 const app = express();
 const upload = multer({ dest: 'uploads/' });
 
-app.use(cors());
+// app.use(cors({
+//   origin: 'http://localhost:3000', // Allow requests from this origin
+//   methods: ['GET', 'POST'], // Allow these HTTP methods
+//   allowedHeaders: ['Content-Type'], // Allow these headers
+// }));
+
+app.use(cors({
+  origin: '*', // Allow all origins
+}));
+
+// app.use(cors({
+//   origin: 'http://localhost:3000', // Adjust according to your frontend domain
+//   methods: ['GET', 'POST'],
+//   allowedHeaders: ['Content-Type'],
+// }));
+
 
 app.post('/upload', upload.single('file'), async (req, res) => {
   try {

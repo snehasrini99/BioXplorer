@@ -15,14 +15,14 @@ kill -9 <pid>
 
 
 
-
+<!-- add here -->
 In a new terminal,
 ssh gjf3sa@gpusrv11 
-cd /p/realai/BioXplorer/WebApp/src
+cd /p/realai/BioXplorer/WebApp
 conda activate BioXplorer
 node server.js
 In another terminal,
-ssh -L 5001:localhost:5001 gjf3sa@gpusrv11 
+ssh -L 5001:localhost:5001 gjf3sa@gpusrv10
 
 
 
@@ -32,6 +32,7 @@ cd /p/realai/BioXplorer/WebApp
 conda activate BioXplorer
 npm start
 In a new terminal,
-ssh -L 3000:localhost:3000 gjf3sa@gpusrv11 
+(Paste as is)
+ssh -L 3000:localhost:3000 gjf3sa@gpusrv10
 
 
